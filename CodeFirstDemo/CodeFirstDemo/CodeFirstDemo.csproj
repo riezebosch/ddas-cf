@@ -46,15 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Migrations\201501221257382_InitialMigration.cs" />
+    <Compile Include="Migrations\201501221257382_InitialMigration.Designer.cs">
+      <DependentUpon>201501221257382_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\Mapping\CourseMap.cs" />
+    <Compile Include="Models\Mapping\DepartmentMap.cs" />
+    <Compile Include="Models\Mapping\InstructorMap.cs" />
+    <Compile Include="Models\Mapping\OfficeAssignmentMap.cs" />
+    <Compile Include="Models\Mapping\OnlineCourseMap.cs" />
+    <Compile Include="Models\Mapping\OnsiteCourseMap.cs" />
+    <Compile Include="Models\Mapping\PersonMap.cs" />
+    <Compile Include="Models\Mapping\StudentGradeMap.cs" />
+    <Compile Include="Models\Mapping\StudentMap.cs" />
+    <Compile Include="Models\OfficeAssignment.cs" />
+    <Compile Include="Models\OnlineCourse.cs" />
+    <Compile Include="Models\OnsiteCourse.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\SchoolContext.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentGrade.cs" />
+    <Compile Include="Models\Instructor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SchoolContext.cs" />
-    <Compile Include="Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201501221257382_InitialMigration.resx">
+      <DependentUpon>201501221257382_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
